@@ -1,0 +1,57 @@
+<div class="modal-content">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+          <label for="fecha">Fecha</label>
+        <div class="input-field col s12">
+          <input type="date" name="fecha" [(ngModel)]="publicacion.fecha">
+          
+        </div>
+        <div class="input-field col s12">
+          <input id="titulo" type="text" class="validate" name="titulo" [(ngModel)]="publicacion.titulo">
+          <label for="titulo">Titulo</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="urlvideo" type="text" class="validate" name="urlvideo" [(ngModel)]="publicacion.urlvideo">
+          <label for="urlvideo">Url Video (Copie el tag 'src' del video)</label>
+        </div>
+        <div class="input-field col s12">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Imagen</span>
+              <input type="file" (change)="changeListener($event)">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Si incluye video la imagen no se mostrara">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div style="text-align: center" class="input-field col s12">
+          <img src="{{publicacion.imagen}}" style="width:100px; height:100px">
+        </div>      
+      </div>
+      <div class="row">
+          <div class="form-group">
+              <label for="exampleInputEmail1">Programa</label>
+              <select class="browser-default" name="programa" [(ngModel)]="publicacion.programa">
+              <option *ngFor="let c of programas" [ngValue]="c.programa">{{c.nombre}}</option>
+            </select>
+          </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Categoria</label>
+            <select class="browser-default" name="categoria" [(ngModel)]="publicacion.categoria">
+            <option *ngFor="let c of categorias" [ngValue]="c.programa">{{c.texto}}</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal-footer">
+  <a  class="modal-action modal-close waves-effect waves-green btn-flat" (click)="guardarPublicacion()">Aceptar</a>
+  <a  class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+</div>

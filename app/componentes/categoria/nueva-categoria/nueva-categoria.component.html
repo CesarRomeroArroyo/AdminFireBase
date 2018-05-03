@@ -1,0 +1,37 @@
+<div class="modal-content">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class=" col s6">
+          <label for="nombre">Nombre</label> 
+          <input id="nombre" type="text" class="validate" name="nombre" [(ngModel)]="categoria.nombre">
+        </div>
+        <div class=" col s6">
+            <label for="valor">Descripcion</label>
+          <input id="valor" type="text" class="validate" name="descripcion" [(ngModel)]="categoria.descripcion">
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Imagen</span>
+              <input type="file" (change)="changeListener($event)">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" >
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center" class="input-field col s12">
+          <img src="{{categoria.foto}}"  style="width:100px; height:100px">
+        </div>      
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal-footer">
+  <a (click)="guardarCategoria()" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+  <a  class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+</div>

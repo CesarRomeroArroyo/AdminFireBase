@@ -1,0 +1,48 @@
+<div class="modal-content">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class=" col s12">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" class="validate" name="nombre" [(ngModel)]="programa.nombre">
+        </div>
+        <div class=" col s12">
+          <label for="descripcion">Descripcion</label>
+          <input id="descripcion" type="text" class="validate" name="descripcion" [(ngModel)]="programa.descripcion">
+        </div>
+        <div class=" col s12">
+          <label for="precio">Precio</label>
+          <input id="precio" type="number" class="validate" name="precio" [(ngModel)]="programa.precio">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Imagen</span>
+              <input type="file" (change)="changeListener($event)">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" >
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center" class="input-field col s12">
+          <img src="{{programa.foto}}"  style="width:100px; height:100px">
+        </div>      
+      </div>
+      <div class="row">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Categoria</label>
+            <select class="browser-default" name="categoria" [(ngModel)]="programa.categoria">
+            <option *ngFor="let c of categorias" [ngValue]="c.idunico">{{c.nombre}}</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal-footer">
+  <a  class="modal-action modal-close waves-effect waves-green btn-flat" (click)="guardarPrograma()">Aceptar</a>
+  <a  class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+</div>

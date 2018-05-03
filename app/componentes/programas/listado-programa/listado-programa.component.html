@@ -1,0 +1,21 @@
+<blockquote>
+  Listado de Productos
+</blockquote>
+<div class="row">
+  <div class="col l12">
+    <div class="card-panel">
+      <app-data-table [columns]="this.columns" [data]="programas" [options]="true" (editEvent)="editarCampo($event);abrirModalNuevo();" (deleteEvent)="eliminarCampo($event)"></app-data-table>
+    </div>
+  </div>
+</div>
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large btnfloat" (click)="this.limpiarPublicacion();abrirModalNuevo()">
+    <i class="fa fa-plus"></i>
+  </a>
+</div>
+
+<div id="modalNuevo" class="modal">
+  
+    <app-nuevo-programa [idPublicacion]="programa"></app-nuevo-programa>
+  
+</div>

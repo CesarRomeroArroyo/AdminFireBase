@@ -1,0 +1,39 @@
+.left-sidebar-nav {
+    position: fixed;
+    width: 220px;
+    z-index: 999;
+    height: auto;
+}
+
+.imgmenu{
+    width: 70px
+}
+
+.nav-text {
+    color:white;
+}
+
+.nav-icon {
+    color:white;
+}
+
+.side-nav {
+    background-image: linear-gradient(to bottom, #3f3f3f 0%, #222222 100%);
+}
+
+.wrapper {
+    margin-left: 25%;
+}
+
+nav {
+    background: #555;
+}
+
+header, main, footer {
+    padding-left: 300px;
+}
+
+.collapsible-body a{
+    background: #eeeeee;
+}
+
