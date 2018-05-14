@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDAd5JWBinluL7dUXdKGVYzB9WBSLLpEdg',
-    authDomain: 'domicilios-c8c43.firebaseapp.com',
-    databaseURL: 'https://domicilios-c8c43.firebaseio.com',
-    projectId: 'domicilios-c8c43',
-    storageBucket: 'domicilios-c8c43.appspot.com',
-    messagingSenderId: '844258159915'
+    apiKey: "AIzaSyDMH5SuzU2yZZHfDVyQAKD6KJZf0KbRdHc",
+    authDomain: "telenoticias-1150.firebaseapp.com",
+    databaseURL: "https://telenoticias-1150.firebaseio.com",
+    projectId: "telenoticias-1150",
+    storageBucket: "telenoticias-1150.appspot.com",
+    messagingSenderId: "966030009784"
   }
 };
