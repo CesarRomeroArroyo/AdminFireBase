@@ -20,7 +20,7 @@ export class UsuarioComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.usuarioNuevo = {nombre: 'Administrador', user: 'admin', password: '123',  email: 'admin@admin.com', estado: 1};
+    this.usuarioNuevo = {nombre: 'Cesar Romero', user: 'admin', password: '123',  email: 'admin@admin.com', estado: 1};
   }
 
   addUsuario() {

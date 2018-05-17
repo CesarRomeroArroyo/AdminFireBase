@@ -23,7 +23,10 @@
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.19",
+    "@agm/core": "^1.0.0-beta.2",
+    "angularfire2": "^5.0.0-rc.6",
+    "firebase": "^4.10.1"
   },
   "devDependencies": {
     "@angular/cli": "~1.7.3",

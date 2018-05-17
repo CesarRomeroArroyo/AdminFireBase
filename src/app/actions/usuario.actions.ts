@@ -17,5 +17,6 @@ export class RemoveUsuario implements Action {
     constructor(public payload: number) {}
 }
 
-export type Actions = AddUsuario | RemoveUsuario;
+export type Actions =   AddUsuario
+                        | RemoveUsuario;
 

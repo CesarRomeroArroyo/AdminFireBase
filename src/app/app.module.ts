@@ -13,9 +13,10 @@ import { NavPerfilComponent } from './componentes/nav-perfil/nav-perfil.componen
 import { usuarioReducer } from './reducers/usuario.reducer';
 import { UsuarioComponent } from './componentes/usuario/usuario/usuario.component';
 
-
-
-
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { environment } from '../environments/environment';
+import { AppSettings } from './app.settings';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ import { UsuarioComponent } from './componentes/usuario/usuario/usuario.componen
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     StoreModule.forRoot({
       usuarios: usuarioReducer
     }),
@@ -35,7 +38,9 @@ import { UsuarioComponent } from './componentes/usuario/usuario/usuario.componen
       maxAge: 10
     })
   ],
-  providers: [],
+  providers: [
+    AppSettings
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
