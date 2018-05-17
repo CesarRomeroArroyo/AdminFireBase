@@ -46,7 +46,7 @@ export class FirebaseService {
   guardarDatos(tabla: string, data)  {
     data.idunico = this.appSettings.guid();
     this.itemsCollection = this.afs.collection<any>(tabla);
-    this.itemsCollection.add(data);
+    return this.itemsCollection.add(data);
   }
 
 

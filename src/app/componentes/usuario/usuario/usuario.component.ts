@@ -17,15 +17,11 @@ export class UsuarioComponent implements OnInit {
   usuarioNuevo: UsuarioModel;
   constructor( private store: Store<AppState> ) {
     this.usuarios = this.store.select('usuarios');
+    this.store.dispatch(new UsuarioActions.GetUsuario());
   }
 
-  ngOnInit() {
-    this.usuarioNuevo = {nombre: 'Cesar Romero', user: 'admin', password: '123',  email: 'admin@admin.com', estado: 1};
-  }
+  ngOnInit() {  }
 
-  addUsuario() {
-    this.store.dispatch(new UsuarioActions.AddUsuario(this.usuarioNuevo));
-  }
 
   deleteUsuario(i) {
     this.store.dispatch(new UsuarioActions.RemoveUsuario(i));
