@@ -1,0 +1,12 @@
+<div class="right" *ngIf="usuarios">
+
+  <h3>Tutorials</h3>
+  <ul>
+    <li *ngFor="let usuario of usuarios | async; let i = index" (click)='deleteUsuario(i)'>
+      <a >{{ usuario.nombre }}</a>
+    </li>
+  </ul>
+
+</div>
+
+<button (click)="addUsuario()" >Agregar nuevo usuario </button>
