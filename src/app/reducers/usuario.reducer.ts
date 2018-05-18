@@ -18,6 +18,9 @@ export function usuarioReducer(state: UsuarioModel[] = [], action: UsuarioAction
             return { ...state, ...action.payload };
         case UsuarioActions.ADD_USUARIO:
             return [...state, action.payload];
+        case UsuarioActions.UPDATE_USUARIO:
+            
+            return [...state, action.payload];
         case UsuarioActions.REMOVE_USUARIO:
             state.splice(action.payload, 1);
             return state;

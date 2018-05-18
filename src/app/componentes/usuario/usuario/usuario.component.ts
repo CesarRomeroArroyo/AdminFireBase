@@ -13,18 +13,20 @@ import * as UsuarioActions from './../../../actions/usuario.actions';
 })
 
 export class UsuarioComponent implements OnInit {
-  usuarios: Observable<UsuarioModel[]>;
+  usuarios: UsuarioModel;
   usuarioNuevo: UsuarioModel;
   constructor( private store: Store<AppState> ) {
-    this.usuarios = this.store.select('usuarios');
+    this.store.select('usuarios').subscribe(data => {
+      this.usuarios = data[0];
+    });
     this.store.dispatch(new UsuarioActions.GetUsuario());
   }
 
   ngOnInit() {  }
 
 
-  deleteUsuario(i) {
-    this.store.dispatch(new UsuarioActions.RemoveUsuario(i));
+  prueba() {
+    console.log(this.usuarios);
   }
 
 }

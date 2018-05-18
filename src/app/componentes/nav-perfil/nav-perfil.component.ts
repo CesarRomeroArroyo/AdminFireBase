@@ -12,10 +12,10 @@ import * as UsuarioActions from './../../actions/usuario.actions';
   styleUrls: ['./nav-perfil.component.css']
 })
 export class NavPerfilComponent implements OnInit {
-  usuarios: UsuarioModel[];
+  usuarios: UsuarioModel;
   constructor( private store: Store<AppState> ) {
     this.store.select('usuarios').subscribe( data => {
-      this.usuarios = data;
+      this.usuarios = data[0];
       console.log(this.usuarios);
     });
 

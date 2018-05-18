@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { APP_ROUTING } from './app.routes';
+import { FormsModule } from '@angular/forms';
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
@@ -36,6 +38,8 @@ import { FirebaseService } from './servicios/firebase.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     EffectsModule.forRoot([ UsuarioEffects ]),

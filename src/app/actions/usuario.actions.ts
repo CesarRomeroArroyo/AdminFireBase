@@ -7,6 +7,7 @@ export const GET_USUARIO =              '[Usuario] Get';
 export const GET_USUARIO_SUCCESS =      '[Usuario] Get Success';
 export const ADD_USUARIO =              '[Usuario] Add';
 export const REMOVE_USUARIO =           '[Usuario] Remove';
+export const UPDATE_USUARIO =           '[Usuario] Update';
 
 
 export class GetUsuario implements Action {
@@ -29,8 +30,14 @@ export class RemoveUsuario implements Action {
     constructor(public payload: number) {}
 }
 
+export class UpdateUsuario implements Action {
+    readonly type = UPDATE_USUARIO;
+    constructor(public payload: UsuarioModel) {}
+}
+
 export type Actions =   GetUsuario
                         | GetUsuarioSucces
                         | AddUsuario
-                        | RemoveUsuario;
+                        | RemoveUsuario
+                        | UpdateUsuario;
 
