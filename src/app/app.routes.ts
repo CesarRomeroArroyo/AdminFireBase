@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { UsuarioComponent } from './componentes/usuario/usuario/usuario.component';
+import { MenuConfiguracionComponent } from './componentes/configuracion/menu-configuracion/menu-configuracion.component';
 
 
 const APP_ROUTES: Routes = [

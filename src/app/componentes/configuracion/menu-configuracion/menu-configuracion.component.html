@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let menu of menus | async">
+    {{menu.icono}}
+  </li>
+</ul>
+<button class="btn btn-primary" (click)='crearMenu()'>Aeptar</button>
